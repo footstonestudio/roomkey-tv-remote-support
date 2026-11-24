@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support — RoomKey TV Remote</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 720px; margin: 2rem auto; padding: 0 1.25rem;
+         color: #1c1c1e; background: #fafafa; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #ececec; background: #0c0c0e; }
+    a { color: #5ea3ff; }
+    h1, h2, h3 { color: #ffffff; }
+  }
+  h1 { font-size: 1.75rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  h3 { font-size: 1rem; margin-top: 1.25rem; }
+  .meta { color: #6e6e73; font-size: .9rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  code { background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 4px; }
+  details { margin: .5rem 0; }
+  summary { cursor: pointer; font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>RoomKey TV Remote — Support</h1>
+<p class="meta">Last updated: 2026-11-23</p>
+
+<p>RoomKey TV Remote is an iPhone and iPad remote-control utility for compatible TVs on your local Wi-Fi network. On your Home Screen, build 1.0 (2) appears as <strong>Smart TV Remote</strong>.</p>
+
+<h2>Getting started</h2>
+<ol>
+  <li>Connect your iPhone or iPad and TV to the same Wi-Fi network.</li>
+  <li>On the TV, enable network/remote control:
+    <ul>
+      <li><strong>Settings → Network &amp; Internet → Home Network → IP Control</strong> (or, on older firmware, <strong>System → Network → Home Network Setup → IP Control</strong>).</li>
+      <li>Set <strong>Simple IP Control</strong> to <strong>On</strong>.</li>
+      <li>Set <strong>Authentication</strong> to <strong>Normal</strong> for PIN pairing (recommended), or <strong>Normal and Pre-Shared Key</strong> if you prefer PSK.</li>
+      <li>In <strong>Settings → Network</strong>, turn on <strong>Remote Start</strong> so the TV responds even when off.</li>
+    </ul>
+  </li>
+  <li>Open the app, tap <strong>Find TVs on Wi-Fi</strong>, choose your TV, then tap <strong>Get PIN from TV</strong>. The TV will display a 4-digit PIN — type it into the app to finish pairing.</li>
+</ol>
+
+<h2>Troubleshooting</h2>
+
+<details>
+<summary>The scanner can't find my TV</summary>
+<ul>
+  <li>Confirm your device and TV are on the same Wi-Fi network (not a guest network or separate 5 GHz SSID).</li>
+  <li>Open <strong>Settings → Privacy &amp; Security → Local Network</strong> and confirm it is enabled.</li>
+  <li>Wake the TV. The TV's network service often goes quiet when the screen is fully asleep on some firmware.</li>
+  <li>Use <strong>Enter IP Address Manually</strong> as a fallback. The TV's IP is visible under <strong>Settings → Network → Network status</strong>.</li>
+</ul>
+</details>
+
+<details>
+<summary>No PIN appears on the TV when I tap "Get PIN from TV"</summary>
+<ul>
+  <li>The TV display must be on. The network service responds when the panel is asleep, but the PIN dialog can't render.</li>
+  <li>If the PIN does not appear, return to the TV’s Home screen and request a new PIN.</li>
+  <li>Confirm <strong>Authentication</strong> is set to <strong>Normal</strong>. If it's set to <strong>None</strong>, the API accepts any request without showing a PIN.</li>
+  <li>If the dialog flashed by too quickly, tap <strong>Show PIN Again</strong> in the app to re-trigger it.</li>
+</ul>
+</details>
+
+<details>
+<summary>The PIN was rejected</summary>
+<ul>
+  <li>The PIN expires shortly after the dialog hides. Tap <strong>Show PIN Again</strong> for a fresh one.</li>
+  <li>Confirm you typed the digits exactly as shown on the TV.</li>
+  <li>If pairing keeps failing, switch the TV to <strong>Normal and Pre-Shared Key</strong> authentication, set a PSK on the TV, and enable <strong>Use Pre-Shared Key Instead</strong> in the app's Add TV screen.</li>
+</ul>
+</details>
+
+<details>
+<summary>Some commands work but others don't</summary>
+<ul>
+  <li>Different TV models support different IRCC codes and app launch URIs. Available controls vary by TV model and firmware. Some app shortcuts may be unsupported on older models — open the TV's home screen manually and launch the app from there.</li>
+</ul>
+</details>
+
+<details>
+<summary>The widget doesn't control my TV</summary>
+<ul>
+  <li>Open the app at least once and confirm a TV is paired and selected. The widget reads the selected TV from the shared App Group container.</li>
+  <li>Long-press the widget and choose <strong>Edit Widget</strong> to refresh its data.</li>
+</ul>
+</details>
+
+<details>
+<summary>How do I remove ads / save more than one TV?</summary>
+<ul>
+  <li>In-app purchases are disabled in the current version. Multiple saved TVs are available without purchase.</li>
+</ul>
+</details>
+
+<details>
+<summary>I cannot find the upgrade option</summary>
+<ul>
+  <li>In-app purchases are disabled in the current version while paid app account setup is completed.</li>
+  <li>Multiple saved TVs are available without purchase in this build.</li>
+</ul>
+</details>
+
+<details>
+<summary>How do I reset everything?</summary>
+<ul>
+  <li>Open <strong>Settings → Reset All Settings</strong> in the app. This removes saved TVs, pairing credentials, and preferences from this device.</li>
+</ul>
+</details>
+
+<h2>Contact</h2>
+<p>For help, <a href="https://github.com/footstonestudio/roomkey-tv-remote-support/issues">open a GitHub issue</a> with your TV model, iOS version, and a short description of what you tried. Issues are public. Keep pairing PINs, pre-shared keys, and other private information out of your report.</p>
+
+<p><a href="privacy-policy.html">Privacy Policy</a></p>
+</body>
+</html>
